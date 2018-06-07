@@ -1,0 +1,11 @@
+C:\Csharp\WindowsForm\Loja_de_calcados\Negocios\bin\Debug\Negocios.dll
+C:\Csharp\WindowsForm\Loja_de_calcados\Negocios\bin\Debug\Negocios.pdb
+C:\Csharp\WindowsForm\Loja_de_calcados\Negocios\obj\Debug\Negocios.csproj.CoreCompileInputs.cache
+C:\Csharp\WindowsForm\Loja_de_calcados\Negocios\obj\Debug\Negocios.dll
+C:\Csharp\WindowsForm\Loja_de_calcados\Negocios\obj\Debug\Negocios.pdb
+C:\Csharp\WindowsForm\Loja_de_calcados\Negocios\obj\Debug\Negocios.csprojResolveAssemblyReference.cache
+C:\Csharp\WindowsForm\Loja_de_calcados\Negocios\bin\Debug\AcessoBancoDados.dll
+C:\Csharp\WindowsForm\Loja_de_calcados\Negocios\bin\Debug\ObjetoTransferencia2.dll
+C:\Csharp\WindowsForm\Loja_de_calcados\Negocios\bin\Debug\AcessoBancoDados.pdb
+C:\Csharp\WindowsForm\Loja_de_calcados\Negocios\bin\Debug\AcessoBancoDados.dll.config
+C:\Csharp\WindowsForm\Loja_de_calcados\Negocios\bin\Debug\ObjetoTransferencia2.pdb

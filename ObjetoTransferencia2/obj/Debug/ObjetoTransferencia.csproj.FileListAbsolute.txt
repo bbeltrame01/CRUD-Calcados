@@ -1,0 +1,6 @@
+C:\Csharp\WindowsForm\Loja_de_calcados\ObjetoTransferencia2\obj\Debug\ObjetoTransferencia.csproj.CoreCompileInputs.cache
+C:\Csharp\WindowsForm\Loja_de_calcados\ObjetoTransferencia2\bin\Debug\ObjetoTransferencia2.dll
+C:\Csharp\WindowsForm\Loja_de_calcados\ObjetoTransferencia2\bin\Debug\ObjetoTransferencia2.pdb
+C:\Csharp\WindowsForm\Loja_de_calcados\ObjetoTransferencia2\obj\Debug\ObjetoTransferencia2.dll
+C:\Csharp\WindowsForm\Loja_de_calcados\ObjetoTransferencia2\obj\Debug\ObjetoTransferencia2.pdb
+C:\Csharp\WindowsForm\Loja_de_calcados\ObjetoTransferencia2\obj\Debug\ObjetoTransferencia.csprojResolveAssemblyReference.cache

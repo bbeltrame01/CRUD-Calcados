@@ -1,0 +1,7 @@
+C:\Csharp\WindowsForm\Loja_de_calcados\AcessoBancoDados\bin\Debug\AcessoBancoDados.dll.config
+C:\Csharp\WindowsForm\Loja_de_calcados\AcessoBancoDados\bin\Debug\AcessoBancoDados.dll
+C:\Csharp\WindowsForm\Loja_de_calcados\AcessoBancoDados\bin\Debug\AcessoBancoDados.pdb
+C:\Csharp\WindowsForm\Loja_de_calcados\AcessoBancoDados\obj\Debug\AcessoBancoDados.csprojResolveAssemblyReference.cache
+C:\Csharp\WindowsForm\Loja_de_calcados\AcessoBancoDados\obj\Debug\AcessoBancoDados.csproj.CoreCompileInputs.cache
+C:\Csharp\WindowsForm\Loja_de_calcados\AcessoBancoDados\obj\Debug\AcessoBancoDados.dll
+C:\Csharp\WindowsForm\Loja_de_calcados\AcessoBancoDados\obj\Debug\AcessoBancoDados.pdb
