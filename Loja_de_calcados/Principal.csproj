@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8D535C09-422A-408B-BDC8-D287EF18B333}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Loja_de_calcados</RootNamespace>
+    <AssemblyName>Loja_de_calcados</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AlphaBlendTextBox">
+      <HintPath>..\AlphaBlendTextBox.dll</HintPath>
+    </Reference>
+    <Reference Include="Correios.Net, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Correios.CEP.Net.1.1.6\lib\Correios.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Acao.cs" />
+    <Compile Include="Forms\cadClientes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\cadClientes.Designer.cs">
+      <DependentUpon>cadClientes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\cadFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\cadFornecedores.Designer.cs">
+      <DependentUpon>cadFornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\cadFuncionarios.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\cadFuncionarios.Designer.cs">
+      <DependentUpon>cadFuncionarios.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\cadItens.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\cadItens.Designer.cs">
+      <DependentUpon>cadItens.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\home.Designer.cs">
+      <DependentUpon>home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Classes\Program.cs" />
+    <Compile Include="Forms\pesqCliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\pesqCliente.Designer.cs">
+      <DependentUpon>pesqCliente.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\pesqFornecedores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\pesqFornecedores.Designer.cs">
+      <DependentUpon>pesqFornecedores.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\pesqFuncionario.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\pesqFuncionario.Designer.cs">
+      <DependentUpon>pesqFuncionario.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\pesqItem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\pesqItem.Designer.cs">
+      <DependentUpon>pesqItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Classes\ValidaCNPJ.cs" />
+    <Compile Include="Classes\ValidaCPF.cs" />
+    <Compile Include="Forms\venda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\venda.Designer.cs">
+      <DependentUpon>venda.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\cadClientes.resx">
+      <DependentUpon>cadClientes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\cadFornecedores.resx">
+      <DependentUpon>cadFornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\cadFuncionarios.resx">
+      <DependentUpon>cadFuncionarios.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\cadItens.resx">
+      <DependentUpon>cadItens.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\home.resx">
+      <DependentUpon>home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\login.resx">
+      <DependentUpon>login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\pesqCliente.resx">
+      <DependentUpon>pesqCliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\pesqFornecedores.resx">
+      <DependentUpon>pesqFornecedores.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\pesqFuncionario.resx">
+      <DependentUpon>pesqFuncionario.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\pesqItem.resx">
+      <DependentUpon>pesqItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="Forms\venda.resx">
+      <DependentUpon>venda.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Negocios\Negocios.csproj">
+      <Project>{6f9a6424-3c58-4d16-a2d4-0fbb5d8324e8}</Project>
+      <Name>Negocios</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\ObjetoTransferencia2\ObjetoTransferencia.csproj">
+      <Project>{c36f8dd5-b7a7-4014-9cf2-d355eeecefc3}</Project>
+      <Name>ObjetoTransferencia</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
