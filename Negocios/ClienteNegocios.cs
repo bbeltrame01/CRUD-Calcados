@@ -1,4 +1,4 @@
-﻿using AcessoBancoDados;
+using AcessoBancoDados;
 using ObjetoTransferencia2;
 using System;
 using System.Data;
@@ -39,9 +39,10 @@ namespace Negocios
         }
 
 
-        public string Inserir(Cliente cliente)
+        public string InserirPF(Cliente cliente)
         {
             PessoaFisica pessoaFisica = new PessoaFisica();
+            Pessoa pessoa = new Pessoa();
 
             acessoDados.limparParametros();
 
@@ -50,14 +51,41 @@ namespace Negocios
             acessoDados.addParametros("@nome_pessoaFisica", pessoaFisica.Nome);
             acessoDados.addParametros("@cpf_pessoaFisica", pessoaFisica.CPF);
             acessoDados.addParametros("@dtNasc_pessoaFisica", pessoaFisica.dtNascimento);
-            acessoDados.addParametros("@cep_pessoa", pessoaFisica.Pessoa.cep);
-            acessoDados.addParametros("@uf_pessoa", pessoaFisica.Pessoa.uf);
-            acessoDados.addParametros("@cidade_pessoa", pessoaFisica.Pessoa.cidade);
-            acessoDados.addParametros("@endereco_pessoa", pessoaFisica.Pessoa.rua);
-            acessoDados.addParametros("@numero_pessoa", pessoaFisica.Pessoa.numero);
-            acessoDados.addParametros("@bairro_pessoa", pessoaFisica.Pessoa.bairro);
-            acessoDados.addParametros("@telefone_pessoa", pessoaFisica.Pessoa.telefone);
-            acessoDados.addParametros("@email_pessoa", pessoaFisica.Pessoa.email);
+            acessoDados.addParametros("@cep_pessoa", pessoa.cep);
+            acessoDados.addParametros("@uf_pessoa", pessoa.uf);
+            acessoDados.addParametros("@cidade_pessoa", pessoa.cidade);
+            acessoDados.addParametros("@endereco_pessoa", pessoa.rua);
+            acessoDados.addParametros("@numero_pessoa", pessoa.numero);
+            acessoDados.addParametros("@bairro_pessoa", pessoa.bairro);
+            acessoDados.addParametros("@telefone_pessoa", pessoa.telefone);
+            acessoDados.addParametros("@email_pessoa", pessoa.email);
+
+            acessoDados.executarAlteracao(CommandType.StoredProcedure, "InserirPessoaFisica");
+            string idCliente = acessoDados.executarAlteracao(CommandType.StoredProcedure, "InserirCliente").ToString();
+
+            return idCliente;
+        }
+
+        public string InserirPJ(Cliente cliente)
+        {
+
+            PessoaJuridica pessoaJuridica = new PessoaJuridica();
+            Pessoa pessoa = new Pessoa();
+
+            acessoDados.limparParametros();
+
+            acessoDados.addParametros("@id_cliente", cliente.Pessoa.idPessoa);
+            acessoDados.addParametros("@tipo_pessoa", pessoaJuridica.Pessoa.PessoaTipo.idPessoaTipo);
+            acessoDados.addParametros("@nome_pessoaFisica", pessoaJuridica.Razao);
+            acessoDados.addParametros("@cpf_pessoaFisica", pessoaJuridica.CNPJ);
+            acessoDados.addParametros("@cep_pessoa", pessoa.cep);
+            acessoDados.addParametros("@uf_pessoa", pessoa.uf);
+            acessoDados.addParametros("@cidade_pessoa", pessoa.cidade);
+            acessoDados.addParametros("@endereco_pessoa", pessoa.rua);
+            acessoDados.addParametros("@numero_pessoa", pessoa.numero);
+            acessoDados.addParametros("@bairro_pessoa", pessoa.bairro);
+            acessoDados.addParametros("@telefone_pessoa", pessoa.telefone);
+            acessoDados.addParametros("@email_pessoa", pessoa.email);
 
             acessoDados.executarAlteracao(CommandType.StoredProcedure, "InserirPessoaFisica");
             string idCliente = acessoDados.executarAlteracao(CommandType.StoredProcedure, "InserirCliente").ToString();
