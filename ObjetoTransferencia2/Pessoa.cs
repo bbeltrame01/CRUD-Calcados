@@ -1,4 +1,6 @@
-﻿namespace ObjetoTransferencia2
+using System;
+
+namespace ObjetoTransferencia2
 {
     public class Pessoa
     {
@@ -6,6 +8,7 @@
         public PessoaTipo PessoaTipo { get; set; }
         public string Nome { get; set; }
         public string CpfCnpj { get; set; }
+        public DateTime dtNasc { get; set; }
         public string cep { get; set; }
         public string uf { get; set; }
         public string cidade { get; set; }
