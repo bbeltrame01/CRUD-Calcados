@@ -26,11 +26,39 @@ namespace Negocios
             foreach (DataRow dataRow in dataTable.Rows)
             {
                 Cliente cliente = new Cliente();
-
                 cliente.Pessoa = new Pessoa();
-                cliente.Pessoa.idPessoa = Convert.ToInt32(dataRow["id_cliente"]);
-                cliente.Pessoa.Nome = Convert.ToString(dataRow["Nome_Razao"]);
-                cliente.Pessoa.CpfCnpj = Convert.ToString(dataRow["CPF_CNPJ"]);
+                cliente.Pessoa.PessoaTipo = new PessoaTipo();
+
+                
+                try
+                {
+                    cliente.Pessoa.idPessoa = Convert.ToInt32(dataRow["id_cliente"]);
+                    cliente.Pessoa.PessoaTipo.idPessoaTipo = Convert.ToInt32(dataRow["id_pessoaTipo"]);
+                    cliente.Pessoa.Nome = Convert.ToString(dataRow["Nome_Razao"]);
+                    cliente.Pessoa.CpfCnpj = Convert.ToString(dataRow["CPF_CNPJ"]);
+                    cliente.Pessoa.dtNasc = Convert.ToDateTime(dataRow["dtNasc_pessoaFisica"]);
+                    cliente.Pessoa.cep = Convert.ToString(dataRow["cep_pessoa"]);
+                    cliente.Pessoa.uf = Convert.ToString(dataRow["uf_pessoa"]);
+                    cliente.Pessoa.rua = Convert.ToString(dataRow["endereco_pessoa"]);
+                    cliente.Pessoa.cidade = Convert.ToString(dataRow["cidade_pessoa"]);
+                    cliente.Pessoa.bairro = Convert.ToString(dataRow["bairro_pessoa"]);
+                    cliente.Pessoa.numero = Convert.ToInt32(dataRow["numero_pessoa"]);
+                    cliente.Pessoa.email = Convert.ToString(dataRow["email_pessoa"]);
+                    cliente.Pessoa.telefone = Convert.ToString(dataRow["telefone_pessoa"]);
+                }
+                catch (Exception)
+                {
+                    cliente.Pessoa.idPessoa = Convert.ToInt32(dataRow["id_cliente"]);
+                    cliente.Pessoa.PessoaTipo.idPessoaTipo = Convert.ToInt32(dataRow["id_pessoaTipo"]);
+                    cliente.Pessoa.Nome = Convert.ToString(dataRow["Nome_Razao"]);
+                    cliente.Pessoa.CpfCnpj = Convert.ToString(dataRow["CPF_CNPJ"]);
+                    cliente.Pessoa.cep = Convert.ToString(dataRow["cep_pessoa"]);
+                    cliente.Pessoa.uf = Convert.ToString(dataRow["uf_pessoa"]);
+                    cliente.Pessoa.rua = Convert.ToString(dataRow["endereco_pessoa"]);
+                    cliente.Pessoa.cidade = Convert.ToString(dataRow["cidade_pessoa"]);
+                    cliente.Pessoa.bairro = Convert.ToString(dataRow["bairro_pessoa"]);
+                }
+                
 
                 clienteColecao.Add(cliente);
             }
